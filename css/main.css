@@ -89,7 +89,7 @@ header ul a {
   display: -ms-grid;
   display: grid;
   text-align: center;
-  padding: 4em;
+  padding: 2em;
   height: 70vh;
 }
 
@@ -171,7 +171,7 @@ section {
 .portfolio-container,
 .portfolio-container-inverse {
   margin-bottom: 2em;
-  padding: 2em;
+  padding: 1em 0;
 }
 
 .portfolio-container a img,
@@ -224,6 +224,7 @@ footer p {
 @media only screen and (min-width: 800px) {
   .hero {
     height: 90vh;
+    padding: 4em;
   }
   .featured, .portfolio {
     text-align: left;
@@ -233,6 +234,7 @@ footer p {
     display: grid;
     -ms-grid-columns: 60% auto;
         grid-template-columns: 60% auto;
+    padding: 2em;
   }
   .portfolio-container-inverse {
     display: -ms-grid;
@@ -243,11 +245,13 @@ footer p {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    padding: 2em;
   }
   .left, .portfolio-left {
     display: -ms-grid;
     display: grid;
     place-content: center;
+    padding-right: 2em;
   }
   .right {
     margin-left: 2em;
@@ -258,7 +262,6 @@ footer p {
   }
   .portfolio-container img,
   .portfolio-container-inverse img {
-    margin-left: 2em;
     display: block;
   }
   .project-text {
