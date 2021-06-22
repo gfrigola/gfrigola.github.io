@@ -171,6 +171,7 @@ section {
 .portfolio-container,
 .portfolio-container-inverse {
   margin-bottom: 2em;
+  padding: 2em;
 }
 
 .portfolio-container a img,
