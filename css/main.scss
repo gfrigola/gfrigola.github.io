@@ -251,7 +251,8 @@ footer {
         font-weight: 300;
         display: block;
         visibility: hidden;
-        transition: visibility .2s ease-in-out;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
     }
     
   
@@ -262,6 +263,7 @@ footer {
 
         .project-text{
             visibility: visible;
+            opacity: 1;
         }
     }
 }

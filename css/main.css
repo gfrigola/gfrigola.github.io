@@ -265,8 +265,9 @@ footer p {
     font-weight: 300;
     display: block;
     visibility: hidden;
-    -webkit-transition: visibility .2s ease-in-out;
-    transition: visibility .2s ease-in-out;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
   }
   .portfolio-container:hover,
   .portfolio-container-inverse:hover {
@@ -276,6 +277,7 @@ footer p {
   .portfolio-container:hover .project-text,
   .portfolio-container-inverse:hover .project-text {
     visibility: visible;
+    opacity: 1;
   }
 }
 
