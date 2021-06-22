@@ -1,2 +1,1 @@
-# gfrigola.github.io
-Portfolio
+#HELLO AND WELCOME TO MY PORTFOLIO :D

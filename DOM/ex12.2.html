@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 12.2: Llista de la compra</h1>
+        <input type="text" name="producte" id="producte" placeholder="Producte">
+        <form action="">
+            <div>
+                <input type="radio" id="pa" name="compra" value="Forn de pa">
+                <label for="sr">Forn de pa</label>
+            </div>
+            <div>
+                <input type="radio" id="fruita" name="compra" value="Fruita i verdura">
+                <label for="sra">Fruita i verdura</label>
+            </div>
+            <div>
+                <input type="radio" id="lactics" name="compra" value="Làctics">
+                <label for="hom">Làctics</label>
+            </div>
+            <div>
+                <input type="radio" id="carn" name="compra" value="Carnisseria">
+                <label for="sr">Carnisseria</label>
+            </div>
+            <div>
+                <input type="radio" id="altres" name="compra" value="Altres">
+                <label for="sr">Altres</label>
+            </div>
+        </form>
+        <button id="mybtn">Afegir</button>
+        <button id="ordenar">Ordenar</button>
+        <h3>Llista de la compra</h3>
+        <pre id="text"></pre>
+        
+    </article>
+    <script>
+        let llistaCompra = {
+            carnisseria: [],
+            fruitaVerdura: [],
+            lactics: [],
+            fornPa: [],
+            altres: [],
+            ordenar: function(){
+                this.carnisseria.sort();
+                this.fruitaVerdura.sort();
+                this.lactics.sort();
+                this.fornPa.sort();
+                this.altres.sort();
+            },
+            afegir: function(producte, seccio){
+                switch(seccio){
+                    case "Carnisseria":
+                    llistaCompra.carnisseria.push(producte);
+                    break;
+                    case "Fruita i verdura":
+                    llistaCompra.fruitaVerdura.push(producte);
+                    break;
+                    case "Làctics":
+                    llistaCompra.lactics.push(producte);
+                    break;
+                    case "Forn de pa":
+                    llistaCompra.fornPa.push(producte);
+                    break;
+                    case "Altres":
+                    llistaCompra.altres.push(producte);
+                    break;
+                }
+            }
+        }
+        
+        let producte = document.querySelector('#producte'); 
+        let seccio;
+        let button = document.querySelector("#mybtn");
+        let ordenar = document.querySelector("#ordenar");
+        let seccionsArr = Object.keys(llistaCompra);
+        let text = document.querySelector("#text");
+        let html = "";
+
+        button.addEventListener("click", () =>{
+            producte = this.producte.value;
+            seccio = document.querySelector('input[name="compra"]:checked').value;
+            llistaCompra.afegir(producte, seccio);
+            html = "";
+            text.innerHTML = llista(seccionsArr, llistaCompra);
+            })
+
+        ordenar.addEventListener("click", () =>{
+            llistaCompra.ordenar();
+            html = "";
+            text.innerHTML = llista(seccionsArr, llistaCompra);
+            })
+
+        function llista(seccionsArr, llistaCompra){
+            for(let i = 0; i< seccionsArr.length -2; i++){
+                html += "\n" + "-" + seccionsArr[i];
+                for(element of llistaCompra[seccionsArr[i]]){
+                    html += "\n" + "  +" +  element;
+                }                
+            }
+            return html;
+        }
+    </script>
+</body>
+</html>

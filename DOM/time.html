@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="time.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici "Time"</h1>
+
+        <div id="cont">
+            <p id="data">Data: </p>
+            <textarea name="" id="input"></textarea>
+            <div id="output"></div>
+        </div>
+    </article>
+
+    <script>
+        var input = document.querySelector("#input")
+        var output = document.querySelector("#output")
+        
+        var i = 0;
+        
+        setInterval(() => {
+            output.innerHTML = input.value;
+        }, 2000);
+        
+        console.log("hola");
+        
+        
+        var data = document.querySelector("#data");
+        
+        var timer = setInterval(() => {
+            data.innerHTML = "Data: " + new Date();
+            i++;
+            
+            if(i == 10) clearInterval(timer);
+        }, 1000)
+        
+        
+    </script>
+    
+    
+    
+    <!-- setTimeout(): dispara una funció quan passin els milisegons que posem -->
+    
+    <script>
+        const alerta = _ => window.alert("Han passat 5 segons")
+        
+        setTimeout(alerta, 5000)
+    </script>
+
+</body>
+</html>
