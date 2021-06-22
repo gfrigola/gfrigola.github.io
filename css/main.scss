@@ -170,6 +170,15 @@ section {
     border-radius: 1em;
 }
 
+.portfolio-title{
+    text-align: center;
+    color: $white-color;
+    margin-bottom: 4em;
+    letter-spacing: .2em;
+    font-size: .85em;
+    text-transform: uppercase;
+}
+
 .project-subtitle{
     text-transform: uppercase;
     font-weight: bold;
@@ -219,7 +228,13 @@ footer {
     .featured, .portfolio {
         text-align: left;
     }
-    .featured, .portfolio-container {
+    .featured{
+        display: grid;
+        grid-template-columns: 60% auto;
+        padding: 4em;
+    }
+    
+    .portfolio-container {
         display: grid;
         grid-template-columns: 60% auto;
         padding: 2em;
@@ -368,6 +383,11 @@ footer {
 }
 
 @media only screen and (min-width: 1550px) {
+
+    body{
+        margin: 0 auto;
+        max-width: 2800px;
+    }
 
     header {
         padding: 2em 2em 2em 20em;
