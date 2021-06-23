@@ -115,7 +115,6 @@ header ul a span {
 
 footer {
   background-color: #222222;
-  margin-top: 2em;
 }
 
 footer p {
@@ -124,6 +123,24 @@ footer p {
   font-weight: 100;
   padding: 2em;
   margin-top: 0;
+}
+
+footer .contact {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  padding: 2em 2em 0 2em;
+  display: block;
+}
+
+footer .contact a {
+  font-weight: 400;
+  color: #FDD53D;
+}
+
+footer .contact a:hover {
+  text-decoration: underline;
 }
 
 .quote {

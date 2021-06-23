@@ -36,6 +36,10 @@ img {
   color: white;
 }
 
+.nav-container a:hover {
+  text-decoration: underline;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +95,10 @@ header ul a {
   text-align: center;
   padding: 2em;
   height: 70vh;
+}
+
+.hero p:hover {
+  text-decoration: underline;
 }
 
 .meet {
@@ -170,19 +178,24 @@ section {
 
 .portfolio-container,
 .portfolio-container-inverse {
-  margin-bottom: 2em;
-  padding: 1em 0;
+  padding: 3em 0;
+  display: block;
 }
 
-.portfolio-container a img,
-.portfolio-container-inverse a img {
+.portfolio-container:not(:last-child),
+.portfolio-container-inverse:not(:last-child) {
+  border-bottom: 1px solid #fbfbfb;
+}
+
+.portfolio-container img,
+.portfolio-container-inverse img {
   border-radius: 1em;
 }
 
 .portfolio-title {
   text-align: center;
   color: #fbfbfb;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   letter-spacing: .2em;
   font-size: .85em;
   text-transform: uppercase;
@@ -222,6 +235,24 @@ footer p {
   margin-top: 0;
 }
 
+footer .contact {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  padding: 2em 2em 0 2em;
+  display: block;
+}
+
+footer .contact a {
+  font-weight: 400;
+  color: #FDD53D;
+}
+
+footer .contact a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 500px) {
   header ul {
     display: -webkit-box;
@@ -251,6 +282,9 @@ footer p {
     -ms-grid-columns: 60% auto;
         grid-template-columns: 60% auto;
     padding: 2em;
+  }
+  .portfolio-container:not(:last-child) {
+    border-bottom: none;
   }
   .portfolio-container-inverse {
     display: -ms-grid;

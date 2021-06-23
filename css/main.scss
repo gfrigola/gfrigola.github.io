@@ -39,6 +39,10 @@ img{
 
     a{
         color:white;
+
+        &:hover{
+            text-decoration: underline;
+        }
     }
 }
 header {
@@ -85,6 +89,10 @@ header {
     text-align: center;
     padding: 2em;
     height: 70vh;
+
+    p:hover{
+        text-decoration: underline;
+    }
 }
 
 .meet {
@@ -161,19 +169,22 @@ section {
 
 .portfolio-container,
 .portfolio-container-inverse{
-    margin-bottom: 2em;
-    padding: 1em 0;
+    padding: 3em 0; 
+    display: block;
+    &:not(:last-child){
+        border-bottom: 1px solid $white-color;
+    }
 }
 
-.portfolio-container a img,
-.portfolio-container-inverse a img{
+.portfolio-container img,
+.portfolio-container-inverse img{
     border-radius: 1em;
 }
 
 .portfolio-title{
     text-align: center;
     color: $white-color;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     letter-spacing: .2em;
     font-size: .85em;
     text-transform: uppercase;
@@ -209,6 +220,23 @@ footer {
         padding: 2em;
         margin-top: 0;
     }
+    .contact{
+        font-weight: 300;
+        color:white;
+        text-align: center;
+        font-weight: 100;
+        padding: 2em 2em 0 2em;
+        display: block;
+
+        a{
+            font-weight: 400;
+            color: $primary-color;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 
@@ -238,6 +266,10 @@ footer {
         display: grid;
         grid-template-columns: 60% auto;
         padding: 2em;
+
+        &:not(:last-child){
+            border-bottom: none;
+        }
     }
     .portfolio-container-inverse {
         display: grid;

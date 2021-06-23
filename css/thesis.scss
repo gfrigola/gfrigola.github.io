@@ -119,14 +119,30 @@ header {
 
 footer {
     background-color: $dark-color;
-    margin-top: 2em;   
-
+    
     p{
         color:white;
         text-align: center;
         font-weight: 100;
         padding: 2em;
         margin-top: 0;
+    }
+    .contact{
+        font-weight: 300;
+        color:white;
+        text-align: center;
+        font-weight: 100;
+        padding: 2em 2em 0 2em;
+        display: block;
+
+        a{
+            font-weight: 400;
+            color: $primary-color;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 }
 
